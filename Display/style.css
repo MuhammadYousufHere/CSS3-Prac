@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /* background-color: #4ffd; */
+  /*  */
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+}
+.black-box {
+  margin: 10px;
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background-color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.row {
+  border: 2px solid blue;
+  /* display: inline-flex; */
+  display: block flex;
+
+  /* display: contents; */
+  /* display: grid; */
+  display: none;
+}
+.box {
+  border: 3px dotted green;
+  flex-basis: 20%;
+}
+.container {
+  border: 2px solid blue;
+  /* its going to contain img inside parent completely  */
+  display: flow-root;
+}
+img {
+  float: left;
+  width: 400px;
+  max-width: 100%;
+}
+nav {
+  float: right;
+  margin-top: 10px;
+  font-size: 18px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+li {
+  display: inline-block;
+  margin: 0.5rem;
+  border: 1px solid black;
+}
+a {
+  text-decoration: none;
+  background-color: aquamarine;
+  display: block;
+  padding: 0.5rem;
+}
+a:hover {
+  background-color: aqua;
+}

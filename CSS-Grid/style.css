@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fafafa;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+nav {
+  float: right;
+  font-size: 18px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+li {
+  display: inline-block;
+  margin: 0.5rem;
+  border: 1px solid black;
+}
+a {
+  text-decoration: none;
+  background-color: aquamarine;
+  display: block;
+  padding: 0.5rem;
+}
+a:hover {
+  background-color: aqua;
+}
+
+/*  Grid*/
+
+.grid {
+  max-width: 1160px;
+  margin: 100px auto;
+  padding: 10px;
+  height: 100%;
+  border: 1px solid maroon;
+  margin: 10px;
+  gap: 12;
+}
+.box {
+  /* width: 50%; */
+  background-color: blanchedalmond;
+  font-size: 20px;
+  padding: 20px;
+  color: brown;
+  border: 1px solid cornflowerblue;
+}
+
+/* properties */
+.grid {
+  display: grid;
+  /* size & column */
+  grid-template-columns: 100px 200px 250px;
+  grid-template-columns: 30% 55% 15%;
+  /* fraction (exact same width )*/
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid {
+  /* gap */
+  column-gap: 12px;
+  row-gap: 12px;
+  /* or */
+  gap: 12px;
+}
+.grid {
+  /* height and row */
+  /* , */
+  /*to fix row height  */
+  grid-auto-rows: 100px;
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-rows: auto 200px 200px;
+  grid-template-rows: repeat(2, 15rem);
+}
+
+.grid {
+  /*similar-- affected by g-t-r*/
+  /* align-items: stretch;
+  align-items: end;
+  align-items: start;
+  align-items: center; */
+  /* justify-content: center; */
+}
+
+.box:nth-of-type(2) {
+  height: 100px;
+  width: 100px;
+  align-self: end;
+  align-self: end;
+  align-self: center;
+
+  justify-self: center;
+}
+/* spanning */
+.box:nth-of-type(1) {
+  color: #000;
+  background-color: aqua;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-column: 1 / 3;
+}
+.box:nth-of-type(5) {
+  color: #ddcc;
+  background-color: #e3e;
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-column: 2 /4;
+}
